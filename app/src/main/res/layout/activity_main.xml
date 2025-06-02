@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/homeTitle"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:background="#0ABCF2"
+            android:gravity="center"
+            android:text="HOME"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ad_logo"
+            app:layout_constraintTop_toBottomOf="@id/homeTitle"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HelloWorld! This is appdong"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/imageView"
+            app:layout_constraintBottom_toTopOf="@id/cal_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/cal_btn"
+            android:text="📅Calendar📅"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/textView"
+            app:layout_constraintBottom_toTopOf="@id/gal_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="#D3EFF8"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/gal_btn"
+            android:text="🖼️Gallery🖼️"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="#D3EFF8"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/cal_btn"
+            app:layout_constraintBottom_toTopOf="@id/insta_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/insta_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="👀Instagram👀"
+            android:textSize="18sp"
+            android:backgroundTint="#D3EFF8"
+            app:layout_constraintTop_toBottomOf="@id/gal_btn"
+            app:layout_constraintBottom_toTopOf="@id/showToastButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/showToastButton"
+            android:text="💡Show Toast💡"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:background="#D3EFF8"
+            app:layout_constraintTop_toBottomOf="@id/insta_btn"
+            app:layout_constraintBottom_toTopmOf="@id/fragment_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <!-- 이 FrameLayout은 Fragment가 올라올 공간 -->
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/showToastButton"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

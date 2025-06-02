@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="galleryFragment" type="id" />
+    <item name="noticeFragment" type="id" />
+    <item name="postTitle" type="id">postTitle</item>
+    <item name="postMeta" type="id" />
+    <item name="postContent" type="id" />
+</resources>
